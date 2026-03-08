@@ -1,0 +1,28 @@
+<h1>Bienvenu à la demonstration</h1>
+<form>
+ Nom: <input type="text" placeholder="Nom" [(ngModel)]="nom" name="nom">
+  Prénom: <input type="text" placeholder="Prénom" [(ngModel)]="prenom" name="prenom">
+  note: <input type="number" placeholder="Note" [(ngModel)]="note" name="note">
+
+</form>
+<p>
+
+
+  Bienvenu {{nom}} {{prenom}} <br>
+<button (click)="changer(-1)">-</button>  Votre note est {{note}} <button (click)="changer(1)">+</button>
+</p>
+<p>
+  Remarque:
+  <!--si note <10 redoublement , si note <15 passable si note <17 bien sinon excellent avec @if -->
+  @if (note < 10) {
+    <span style="color: red">Redoublement</span>
+  } @else if (note < 15) {
+    <span style="color: orange">Passable</span>
+  } @else if (note < 17) {
+    <span style="color: blue">Bien</span>
+  } @else {
+    <span style="color: green">Excellent</span>
+  }
+
+</p>
+
