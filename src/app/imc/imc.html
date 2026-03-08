@@ -1,0 +1,8 @@
+<form (ngSubmit)="calculer()">
+  Poids: <input type="number" required min="20" placeholder="Poids" [(ngModel)]="poids" name="poids">
+  Taille: <input type="number" required min="0.5" placeholder="Taille" [(ngModel)]="taille" name="taille">
+  <button type="submit">Calculer</button>
+  <p>
+    Votre IMC est {{imc}} <br>
+    {{remarque}}
+</form>
